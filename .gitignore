@@ -237,3 +237,5 @@ $RECYCLE.BIN/
 #To Prevent CodeBlocks layout file
 *.layout
 *.depend
+
+*.user
