@@ -22,7 +22,24 @@ ApplicationWindow {
     }
 
     Text {
+        color: "#1c36f5"
         text: qsTr("Hello World")
+        z: 2
+        font.underline: true
+        font.bold: true
+        font.family: "Courier"
+        styleColor: "#e10707"
+        anchors.verticalCenterOffset: 1
+        anchors.horizontalCenterOffset: 0
         anchors.centerIn: parent
+    }
+
+    MouseArea{
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 13
+        anchors.leftMargin: 1
+        anchors.topMargin: -13
+        anchors.fill: parent
+        onClicked: console.log(mouseX,mouseY)
     }
 }
