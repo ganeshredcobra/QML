@@ -40,9 +40,15 @@ ApplicationWindow {
                 GradientStop { position: 1.0; color: "blue" }
             }
     }
+    Rectangle{
+        id : foo
+        width: rectBig.width/2
+        height: 64
+        color: "yellow"
+    }
 
     Text {
         text: qsTr("Hello World")
-        anchors.centerIn: parent
+        anchors.centerIn: blueRec
     }
 }
