@@ -24,6 +24,13 @@ ApplicationWindow {
             x: (parent.width - width)/2; y: 40
 
             source: 'triangle_red.png'
+
+            MouseArea {
+                        id: area
+                        width: parent.width
+                        height: parent.height
+                        onClicked: triangle.visible = !triangle.visible
+                    }
         }
 
         // Another child of root
@@ -62,6 +69,7 @@ ApplicationWindow {
                     // change color based on focus value
                     color: focus?"red":"black"
 
+
 //            // reference element by id
             y: triangle.y + triangle.height + 20
 
@@ -95,6 +103,8 @@ ApplicationWindow {
                    function increment() {
                        spacePresses = spacePresses + 1
                    }
+
+
         }
     }
 }
