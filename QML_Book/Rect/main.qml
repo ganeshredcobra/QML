@@ -125,7 +125,7 @@ ApplicationWindow {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    label.clicked()
+                    button.clicked()
                 }
             }
         }
