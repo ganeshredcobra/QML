@@ -5,5 +5,7 @@
         <file>GreenSquare.qml</file>
         <file>DarkSquare.qml</file>
         <file>BlueSquare.qml</file>
+        <file>row.qml</file>
+        <file>BrightSquare.qml</file>
     </qresource>
 </RCC>
