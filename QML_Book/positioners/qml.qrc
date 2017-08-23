@@ -7,5 +7,6 @@
         <file>BlueSquare.qml</file>
         <file>row.qml</file>
         <file>BrightSquare.qml</file>
+        <file>grid.qml</file>
     </qresource>
 </RCC>
