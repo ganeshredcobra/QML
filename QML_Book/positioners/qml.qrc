@@ -8,5 +8,6 @@
         <file>row.qml</file>
         <file>BrightSquare.qml</file>
         <file>grid.qml</file>
+        <file>repeater.qml</file>
     </qresource>
 </RCC>
