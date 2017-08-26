@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/repeater.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:/layout.qml")));
 
     return app.exec();
 }
