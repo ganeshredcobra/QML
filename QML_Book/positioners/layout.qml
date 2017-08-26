@@ -10,6 +10,7 @@ ApplicationWindow {
     anchors.fill: parent
 
     GreenSquare {
+        id: one
         width: 50
         BlueSquare {
             width: 12
@@ -26,7 +27,7 @@ ApplicationWindow {
     }
 
     GreenSquare {
-         x: 50
+         x: one.width
                BlueSquare {
                    width: 48
                    y: 13
@@ -37,6 +38,17 @@ ApplicationWindow {
                    }
                }
            }
+    GreenSquare {
+        x:one.width*2
+                BlueSquare {
+                    width: 48
+                    anchors.left: parent.right
+                    Text {
+                        text: "(3)"
+                    }
+                }
+            }
+
 
     }
 }
