@@ -12,6 +12,7 @@ ApplicationWindow {
     GreenSquare {
         id: one
         width: 50
+        height: 50
         BlueSquare {
             width: 12
             anchors.fill: parent
@@ -48,6 +49,58 @@ ApplicationWindow {
                     }
                 }
             }
+    GreenSquare {
+                id:secondrow
+               y: one.height+20
+               width: 100
+               height: 100
+               BlueSquare {
+                   id: blue1
+                   width: 48; height: 24
+                   y: 8
+                   anchors.horizontalCenter: parent.horizontalCenter
+               }
+               BlueSquare {
+                   id: blue2
+                   width: 72; height: 24
+                   anchors.top: blue1.bottom
+                   anchors.topMargin: 4
+                   anchors.horizontalCenter: blue1.horizontalCenter
+                   Text {
+                       text: "(4)"
+                   }
+               }
+           }
+    GreenSquare {
+                x:secondrow.width
+                y:secondrow.y
+                width: 100
+                height: 100
+                BlueSquare {
+                    width: 48
+                    anchors.centerIn: parent
+                    Text {
+                        text: "(5)"
+                    }
+                }
+            }
+
+    GreenSquare {
+        x:secondrow.width*2
+        y:secondrow.y
+        width: 100
+        height: 100
+               BlueSquare {
+                   width: 48
+                   anchors.horizontalCenter: parent.horizontalCenter
+                   anchors.horizontalCenterOffset: -12
+                   anchors.verticalCenter: parent.verticalCenter
+                   Text {
+                       text: "(6)"
+                   }
+               }
+           }
+
 
 
     }
