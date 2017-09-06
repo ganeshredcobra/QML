@@ -3,26 +3,36 @@ import QtQuick.Controls 1.2
 
 ApplicationWindow {
     visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
+    Image {
+        id: root
+        source: "../assets/background.png"
 
-    menuBar: MenuBar {
-        Menu {
-            title: qsTr("File")
-            MenuItem {
-                text: qsTr("&Open")
-                onTriggered: console.log("Open action triggered");
+        property int padding: 40
+        property int duration: 400
+        property bool running: false
+
+        Image {
+            id: box
+            x: root.padding;
+            y: (root.height-height)/2
+            source: "../assets/box_green.png"
+
+            NumberAnimation on x {
+                to: root.width - box.width - root.padding
+                duration: root.duration
+                running: root.running
             }
-            MenuItem {
-                text: qsTr("Exit")
-                onTriggered: Qt.quit();
+            RotationAnimation on rotation {
+                to: 360
+                duration: root.duration
+                running: root.running
             }
         }
-    }
 
-    Text {
-        text: qsTr("Hello World")
-        anchors.centerIn: parent
+        MouseArea {
+            anchors.fill: parent
+            onClicked: root.running = true
+        }
+
     }
 }
