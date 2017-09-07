@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>ClickableImageV2.qml</file>
+        <file>../assets/box_green.png</file>
     </qresource>
 </RCC>
