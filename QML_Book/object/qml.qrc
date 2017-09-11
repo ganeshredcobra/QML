@@ -4,5 +4,7 @@
         <file>ClickableImageV2.qml</file>
         <file>../assets/box_green.png</file>
         <file>../assets/box_blue.png</file>
+        <file>../assets/background.png</file>
+        <file>../assets/box_red.png</file>
     </qresource>
 </RCC>
