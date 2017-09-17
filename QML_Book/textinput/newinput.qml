@@ -1,6 +1,16 @@
-import QtQuick 2.0
+import QtQuick 2.3
+import QtQuick.Controls 1.2
 
-Rectangle {
-    width: 100
-    height: 62
+ApplicationWindow {
+    visible: true
+
+    Rectangle {
+        TLineEditV1 {
+            id: input1
+        }
+        TLineEditV1 {
+            id: input2
+        }
+    }
+
 }

@@ -4,5 +4,6 @@
         <file>textinput.qml</file>
         <file>textinput2.qml</file>
         <file>TLineEditV1.qml</file>
+        <file>newinput.qml</file>
     </qresource>
 </RCC>
