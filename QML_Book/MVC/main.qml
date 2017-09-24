@@ -12,11 +12,12 @@ ApplicationWindow {
         spacing: 2
 
         Repeater {
-            model: 10
+            model: ["Enterprise", "Columbia", "Challenger", "Discovery", "Endeavour", "Atlantis"]
+            //model: 10
             BlueBox {
                 width: 120
                 height: 32
-                text: index
+                text: modelData+'('+index+')'
             }
         }
     }
