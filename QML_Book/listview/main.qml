@@ -4,7 +4,7 @@ import QtQuick.Controls 1.2
 ApplicationWindow {
     visible: true
     Background {
-        width: 80
+        width: 480
         height: 300
 
         ListView {
@@ -14,6 +14,7 @@ ApplicationWindow {
             clip: true
 
             model: 100
+            orientation: ListView.Horizontal
 
             delegate: numberDelegate
             spacing: 5
