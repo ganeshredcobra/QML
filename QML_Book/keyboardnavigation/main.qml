@@ -27,9 +27,25 @@ Background {
     Component {
         id: highlightComponent
 
-        GreenBox {
-            width: ListView.view.width
-        }
+        Item {
+                    width: ListView.view.width
+                    height: ListView.view.currentItem.height
+
+                    y: ListView.view.currentItem.y
+
+                    Behavior on y {
+                        SequentialAnimation {
+                            PropertyAnimation { target: highlightRectangle; property: "opacity"; to: 0; duration: 200 }
+                            NumberAnimation { duration: 10 }
+                            PropertyAnimation { target: highlightRectangle; property: "opacity"; to: 1; duration: 200 }
+                        }
+                    }
+
+                    GreenBox {
+                        id: highlightRectangle
+                        anchors.fill: parent
+                    }
+                }
     }
 
     Component {
