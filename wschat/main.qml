@@ -1,6 +1,7 @@
 import QtQuick 2.6
 import QtQuick.Window 2.2
 import QtWebSockets 1.0
+import io.qt.examples.backend 1.0
 
 
 Window {
@@ -8,6 +9,10 @@ Window {
     width: 640
     height: 480
     title: qsTr("Hello World")
+
+    BackEnd {
+           id: backend
+       }
 
     function appendMessage(message) {
         messageBox.text += "\n" + "=>" + message
@@ -28,7 +33,7 @@ Window {
             onClientConnected: {
                 webSocket.onTextMessageReceived.connect(function(message) {
                     appendMessage(qsTr("Server received message: %1").arg(message));
-                    webSocket.sendTextMessage(qsTr("Hello Client!"));
+                    webSocket.sendTextMessage(qsTr(backend.userName+": "+"Hello Client!"));
                 });
             }
             onErrorStringChanged: {
